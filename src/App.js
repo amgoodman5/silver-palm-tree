@@ -28,6 +28,7 @@ class App extends Component {
         <div className="app__body">
         <ListItem
         data={videoData}
+        loading={videoProcessing}
         />
         </div>
       </div>

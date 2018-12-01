@@ -1,7 +1,63 @@
-.card{
-  width:420px;
-  background-color:white;
+.card {
+    background-color: white;
+    max-width: 420px;
+    min-width: 420px;
 }
 img {
-    width: 420px;
+  position: relative;
+ width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+      padding: 2%;
+}
+.seriesTitle {
+    color: black;
+    margin: 0;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    width:359px;
+    font family : Arial;
+
+}
+.seriesDescription {
+    color: black;
+    margin: 0;
+    font-size: 16px;
+    padding: 4%;
+}
+.darkText {
+    color: black;
+    font-weight: 400;
+    padding-top:2%;
+}
+.button{
+  height:30px;
+  width:30px;
+  background-color:blue;
+  border-radius:50% 50%;
+
+}
+.button-container {
+  display: flex;
+flex-direction: column;
+position: absolute;
+top: 33%;
+left: 68%;
+
+}
+.top{
+background-color: #01b4b4;
+}
+.bottom{
+  background-color: #5d7389;
 }
