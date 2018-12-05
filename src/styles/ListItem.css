@@ -52,12 +52,37 @@ img {
 flex-direction: column;
 position: absolute;
 transform: translate(1250%, -110%);
+}
 
+.top {
+    background-color: #01b4b4;
+    color: white;
+    display: flex;
+    font-size: 1em;
+    align-items: center;
+    justify-content: center;
+}
+.top:hover{
+background-color:  #007172;
 
 }
-.top{
-background-color: #01b4b4;
+.top:focus{
+
+    outline: -webkit-focus-ring-color auto 0;
+
 }
 .bottom{
   background-color: #5d7389;
+  color: white;
+  font-size: 1em;
+
+}
+.bottom:hover{
+  background-color: #44576b;
+
+}
+.bottom:focus{
+
+    outline: -webkit-focus-ring-color auto 0;
+
 }

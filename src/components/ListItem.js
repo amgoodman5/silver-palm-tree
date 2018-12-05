@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/ListItem.css';
+var FontAwesome = require('react-fontawesome');
+
 
 class ListItem extends React.Component{
   constructor(props) {
@@ -39,7 +41,8 @@ this.toggleBox = this.toggleBox.bind(this);
         <div className="card">
            <img src={data.tileArt}/>
              <div className="buttonContainer">
-                <button className="button top" >+</button>
+                <button className="button top" > >
+      </button>
                 <button className="button bottom" onClick={this.toggleBox}>...</button>
               </div>
                 <section className="card-container">
