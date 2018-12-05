@@ -5,7 +5,7 @@
 }
 img {
   position: relative;
- width: 100%;
+  width: 100%;
 }
 
 .container {
@@ -61,13 +61,13 @@ transform: translate(1250%, -110%);
     font-size: 1em;
     align-items: center;
     justify-content: center;
+    border:none;
 }
 .top:hover{
 background-color:  #007172;
-
+  transition: 0.3s;
 }
 .top:focus{
-
     outline: -webkit-focus-ring-color auto 0;
 
 }
@@ -75,14 +75,15 @@ background-color:  #007172;
   background-color: #5d7389;
   color: white;
   font-size: 1em;
+  margin-top: 5px;
+  border:none;
 
 }
 .bottom:hover{
   background-color: #44576b;
+  transition: 0.3s;
 
 }
 .bottom:focus{
-
     outline: -webkit-focus-ring-color auto 0;
-
 }
