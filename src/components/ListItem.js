@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../styles/ListItem.css';
-var FontAwesome = require('react-fontawesome');
 
 
 class ListItem extends React.Component{
@@ -20,13 +19,12 @@ this.toggleBox = this.toggleBox.bind(this);
         });
       }
 
-
  secondsToHms = (d) => {
           d = Number(d);
           const h = Math.floor(d / 3600);
           const m = Math.floor(d % 3600 / 60);
-          const hDisplay = h > 0 ? h + (h == 1 ? " hr, " : " hrs, ") : "";
-          const mDisplay = m > 0 ? m + (m == 1 ? " min, " : " mins ") : "";
+          const hDisplay = h > 0 ? h + (h === 1 ? " hr, " : " hrs, ") : "";
+          const mDisplay = m > 0 ? m + (m === 1 ? " min, " : " mins ") : "";
           return hDisplay + mDisplay;
       }
 
@@ -39,11 +37,13 @@ this.toggleBox = this.toggleBox.bind(this);
      { data && !loading ?
 
         <div className="card">
-           <img src={data.tileArt}/>
+           <img src={data.tileArt} alt="tileart"/>
              <div className="buttonContainer">
                 <button className="button top" > >
-      </button>
-                <button className="button bottom" onClick={this.toggleBox}>...</button>
+                </button>
+                <button className="button bottom" onClick={this.toggleBox}>
+                ...
+                </button>
               </div>
                 <section className="card-container">
                     <p className="seriesTitle" onClick={this.toggleBox}>{
@@ -54,11 +54,10 @@ this.toggleBox = this.toggleBox.bind(this);
                     <p className="seriesDescription">Shooting bow pose
                     standing half forward bend frog pose cobra pose crab pose
                     sage koundinya ii pose ear pressure pose heron pose breath
-                    retention king dancer pose,</p>
+                    retention king dancer pose</p>
                 )}
                   <span className="darkText">
-                  S{data.seasonNum}:EP{data.episodeNum}
-                  { this.secondsToHms(data.durationSeconds) }</span>
+                   S{data.seasonNum}:Ep{data.episodeNum} &nbsp;  { this.secondsToHms(data.durationSeconds)}</span>
                 </section>
 
                  <p className="darkText"></p>
