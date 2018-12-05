@@ -25,7 +25,7 @@ img {
     overflow:hidden;
     white-space:nowrap;
     text-overflow:ellipsis;
-    width:359px;
+    width:400px;
     font family : Arial;
 
 }
@@ -33,7 +33,7 @@ img {
     color: black;
     margin: 0;
     font-size: 16px;
-    padding: 4%;
+    padding: 3% 1%;
 }
 .darkText {
     color: black;
