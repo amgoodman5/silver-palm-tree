@@ -47,12 +47,12 @@ img {
   border-radius:50% 50%;
 
 }
-.button-container {
+.buttonContainer {
   display: flex;
 flex-direction: column;
 position: absolute;
-top: 33%;
-left: 68%;
+transform: translate(1250%, -110%);
+
 
 }
 .top{

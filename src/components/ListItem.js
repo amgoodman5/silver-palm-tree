@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/ListItem.css';
 
-
-
-
 class ListItem extends React.Component{
   constructor(props) {
      super(props);
@@ -22,14 +19,12 @@ this.toggleBox = this.toggleBox.bind(this);
       }
 
 
- secondsToHms(d) {
+ secondsToHms = (d) => {
           d = Number(d);
           const h = Math.floor(d / 3600);
           const m = Math.floor(d % 3600 / 60);
-
           const hDisplay = h > 0 ? h + (h == 1 ? " hr, " : " hrs, ") : "";
           const mDisplay = m > 0 ? m + (m == 1 ? " min, " : " mins ") : "";
-
           return hDisplay + mDisplay;
       }
 
@@ -38,43 +33,39 @@ this.toggleBox = this.toggleBox.bind(this);
     let { data, loading } = this.props;
            return (
   <div class="container">
-  { data && !loading ?
+
+     { data && !loading ?
+
         <div className="card">
-             <img src={data.tileArt}/>
-             <div class="button-container">
-<button className="button top" onClick={this.toggleBox}>+</button>
-<button className="button bottom">...</button>
- </div>
+           <img src={data.tileArt}/>
+             <div className="buttonContainer">
+                <button className="button top" >+</button>
+                <button className="button bottom" onClick={this.toggleBox}>...</button>
+              </div>
                 <section className="card-container">
-                    <p className="seriesTitle" onClick={this.toggleBox} >{data.seriesName}</p>
+                    <p className="seriesTitle" onClick={this.toggleBox}>{
+                      data.seriesName}
+                    </p>
                     <p className="seriesTitle" >{data.title}</p>
-                    {opened && (
-                    <p className="seriesDescription">Shooting bow pose standing half forward bend frog pose cobra pose crab pose sage koundinya ii pose ear pressure pose heron pose breath retention king dancer pose,</p>
+                {opened && (
+                    <p className="seriesDescription">Shooting bow pose
+                    standing half forward bend frog pose cobra pose crab pose
+                    sage koundinya ii pose ear pressure pose heron pose breath
+                    retention king dancer pose,</p>
                 )}
-                  <span className="darkText">S{data.seasonNum}:EP{data.episodeNum}    { this.secondsToHms(data.durationSeconds) }</span>
- </section>
+                  <span className="darkText">
+                  S{data.seasonNum}:EP{data.episodeNum}
+                  { this.secondsToHms(data.durationSeconds) }</span>
+                </section>
 
                  <p className="darkText"></p>
-
                  </div>
               :
               <h2>loading.......</h2>
           }
-
   </div>
-
            );
        }
-
    }
-
-
-
-
-// function loadfunction(data){
-//   return data !== undefined ? '' : data;
-//
-// }
-
 
 export default ListItem
