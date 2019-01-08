@@ -21,14 +21,10 @@ class App extends Component {
 
     return (
       <div className="app">
-        <header className="app__header">
-          
-          
-        </header>
         <div className="app__body">
         <ListItem
-        data={videoData}
-        loading={videoProcessing}
+          data={videoData}
+          loading={videoProcessing}
         />
         </div>
       </div>
